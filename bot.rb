@@ -19,13 +19,12 @@ end
 bot.message(with_text: "who is champ?") do |event|
 	channel = event.user.voice_channel
 	next "You're not in any voice channel!" unless channel
-	event.voice.play_file("audio/whoischamp.mp3")
-	#bot.voice_connect(channel)
-	#"Connected to voice channel: #{channel.name}"
-	#voice_bot = bot.voice(channel)
-	#voice_bot.volume = 0.25
-	#voice_bot.play_file('audio/whoischamp.mp3')
-	#voice_bot.destroy
+	bot.voice_connect(channel)
+	"Connected to voice channel: #{channel.name}"
+	voice_bot = bot.voice(channel)
+	voice_bot.volume = 0.25
+	voice_bot.play_file('audio/whoischamp.mp3')
+	voice_bot.destroy
 end
 
 bot.run 
