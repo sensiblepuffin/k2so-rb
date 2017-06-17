@@ -4,4 +4,4 @@ source "https://rubygems.org"
 ruby '2.3.1'
 
 # gem "rails"
-gem 'Discordrb'
+gem 'discordrb', :git => 'https://github.com/meew0/discordrb', :branch => 'master'
