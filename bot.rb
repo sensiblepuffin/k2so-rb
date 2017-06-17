@@ -16,6 +16,15 @@ bot.message(with_text: "!k2help") do |event|
 	event.respond "I'm not helping you."
 end
 
+bot.message(with_text: "who is champ?") do |event|
+	channel = event.user.voice_channel
+	next "You're not in any voice channel!" unless channel
+	bot.voice_connect(channel)
+	"Connected to voice channel: #{channel.name}"
+	voice_bot = bot.voice(channel)
+	voice_bot.play_file('audio/whoischamp.mp3')
+end
+
 bot.run 
 
-bot.game = "!k2help"
+bot.game("!k2help")
