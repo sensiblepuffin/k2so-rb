@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/meew0/discordrb
-  revision: 60b4bcd9ed20ff9f402dc81096869e54c1c8f8ee
-  branch: master
+  revision: ab6b02ca173cf8798a100630da9343b11dae3865
+  branch: rl-trace
   specs:
     discordrb (3.2.1)
       discordrb-webhooks (~> 3.2.0.1)
@@ -32,6 +32,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    multi_json (1.12.1)
     netrc (0.11.0)
     opus-ruby (1.0.1)
       ffi
@@ -41,6 +42,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    streamio-ffmpeg (3.0.2)
+      multi_json (~> 1.8)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
@@ -55,6 +58,7 @@ PLATFORMS
 DEPENDENCIES
   discordrb!
   sodium!
+  streamio-ffmpeg
 
 RUBY VERSION
    ruby 2.3.1p112
