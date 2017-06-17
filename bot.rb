@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-require 'discordrb'
+require_relative 'discordrb'
 
 # Avoid having the token in plaintext
 if (File.file?("token"))
