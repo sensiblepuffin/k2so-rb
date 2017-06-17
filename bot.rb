@@ -24,6 +24,7 @@ bot.message(with_text: "who is champ?") do |event|
 	voice_bot = bot.voice(channel)
 	voice_bot.volume = 0.5
 	voice_bot.play_file('audio/whoischamp.mp3')
+	voice_bot.destroy
 end
 
 bot.run 
