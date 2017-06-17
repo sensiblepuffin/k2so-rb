@@ -12,6 +12,14 @@ GIT
     discordrb-webhooks (3.2.0.1)
       rest-client
 
+GIT
+  remote: https://github.com/stouset/sodium
+  revision: c5d88dea3dd04f0881f96b0f8f50a2f8e68911ee
+  branch: master
+  specs:
+    sodium (0.7.1)
+      ffi (~> 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,6 +54,7 @@ PLATFORMS
 
 DEPENDENCIES
   discordrb!
+  sodium!
 
 RUBY VERSION
    ruby 2.3.1p112
