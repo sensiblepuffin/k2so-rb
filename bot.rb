@@ -22,7 +22,7 @@ bot.message(with_text: "who is champ?") do |event|
 	bot.voice_connect(channel)
 	"Connected to voice channel: #{channel.name}"
 	voice_bot = bot.voice(channel)
-	voice_bot.volume = 0.5
+	voice_bot.volume = 0.25
 	voice_bot.play_file('audio/whoischamp.mp3')
 	voice_bot.destroy
 end
