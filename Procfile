@@ -1,1 +1,1 @@
-web: ruby bot.rb
+web: bundle exec ruby bot.rb
