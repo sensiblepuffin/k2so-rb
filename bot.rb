@@ -1,5 +1,7 @@
 #!/usr/bin/ruby
 
+require 'discordrb'
+
 # Avoid having the token in plaintext
 if (File.file?("token"))
 	f = File.open("token", "rb")
