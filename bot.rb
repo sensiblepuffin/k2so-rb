@@ -9,7 +9,7 @@ if (File.file?("token"))
 	bot = Discordrb::Bot.new token: token, client_id: 264450615139237899
 	f.close	
 else
-	bot = Discordrb::Bot.new token: ENV['TOKEN'], client_id: 264450615139237899
+	$bot = Discordrb::Bot.new token: ENV['TOKEN'], client_id: 264450615139237899
 end
 
 bot.ready() do |event|
@@ -17,7 +17,7 @@ bot.ready() do |event|
 end
 
 def playAudioInChannel(channel, filename)
-	bot.voice_connect(channel)
+	$bot.voice_connect(channel)
 	voice_bot = bot.voice(channel)
 	voice_bot.volume = 0.25
 	voice_bot.play_file("audio/#{filename}")
