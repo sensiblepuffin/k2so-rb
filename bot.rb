@@ -42,4 +42,6 @@ bot.message(with_text: "why do you have to be mad?") do |event|
 	if channel
 		playAudioInChannel(channel, "why-you-heff-to-be-mehd.mp3")
 	end
+end
+
 bot.run 
