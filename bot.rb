@@ -4,12 +4,17 @@ require 'discordrb'
 
 # Avoid having the token in plaintext
 if (File.file?("token"))
-	f = File.open("token", "rb")
-	token = f.read.gsub("\n","")
-	$bot = Discordrb::Bot.new token: token, client_id: 264450615139237899
-	f.close	
+	t = File.open("token", "rb")
+	token = t.read.gsub("\n","")
+	t.close
+
+	i = File.open("client_id", "rb")
+	id = i.read.gsub("\n","")
+	i.close
+
+	$bot = Discordrb::Commands::CommandBot.new token: token, client_id: id
 else
-	$bot = Discordrb::Bot.new token: ENV['TOKEN'], client_id: 264450615139237899
+	$bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], client_id: ENV['ID']
 end
 
 $bot.ready() do |event|
@@ -18,6 +23,7 @@ end
 
 def playAudioInChannel(channel, filename)
 	$bot.voice_connect(channel)
+	sleep(1) 	# Wait for the join channel sound
 	voice_bot = $bot.voice(channel)
 	voice_bot.volume = 0.25
 	voice_bot.play_file("audio/#{filename}")
