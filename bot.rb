@@ -12,6 +12,10 @@ else
 	bot = Discordrb::Bot.new token: ENV['TOKEN'], client_id: 264450615139237899
 end
 
+bot.ready() do |event|
+	bot.game = "!k2help"
+end
+
 bot.message(with_text: "!k2help") do |event|
 	event.respond "I'm not helping you."
 end
@@ -28,5 +32,3 @@ bot.message(with_text: "who is champ?") do |event|
 end
 
 bot.run 
-
-bot.game("!k2help")
