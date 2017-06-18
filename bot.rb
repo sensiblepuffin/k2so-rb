@@ -16,19 +16,30 @@ bot.ready() do |event|
 	bot.game = "!k2help"
 end
 
+def playAudioInChannel(channel, filename)
+	bot.voice_connect(channel)
+	voice_bot = bot.voice(channel)
+	voice_bot.volume = 0.25
+	voice_bot.play_file("audio/#{filename}")
+	voice_bot.destroy
+end
+
 bot.message(with_text: "!k2help") do |event|
 	event.respond "I'm not helping you."
 end
 
 bot.message(with_text: "who is champ?") do |event|
 	channel = event.user.voice_channel
-	next "You're not in any voice channel!" unless channel
-	bot.voice_connect(channel)
-	"Connected to voice channel: #{channel.name}"
-	voice_bot = bot.voice(channel)
-	voice_bot.volume = 0.25
-	voice_bot.play_file('audio/whoischamp.mp3')
-	voice_bot.destroy
+	if channel
+		playAudioInChannel(channel, "whoischamp.mp3")
+	else
+		event.respond "That question will be answered this Sunday night!"
+	end
 end
 
+bot.message(with_text: "why do you have to be mad?") do |event|
+	channel = event.user.voice_channel
+	if channel
+		playAudioInChannel(channel, "why-you-heff-to-be-mehd.mp3")
+	end
 bot.run 
