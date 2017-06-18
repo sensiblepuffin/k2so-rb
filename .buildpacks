@@ -1,2 +1,4 @@
-https://github.com/JustinLove/heroku-buildpack-libsodium.git
+https://github.com/renanoronfle/heroku-multipack.git
+https://github.com/challengee/heroku-buildpack-libsodium.git
+https://github.com/shunjikonishi/heroku-buildpack-ffmpeg
 https://github.com/Crazycatz00/heroku-buildpack-libopus.git
