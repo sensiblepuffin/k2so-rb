@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 
 require 'discordrb'
+require 'newrelic_rpm'
 
 # Avoid having the token in plaintext
 if (File.file?("token"))

@@ -1,0 +1,18 @@
+A Discord bot written in Ruby.
+
+Originally designed to make my friends laugh, but ever since I got fed up with Node.js (too many broken Promises, heh), it's been half that and half learning opportunity.
+
+I use Heroku for their free plan. If you want to run this on your own Heroku dyno, you'll need buildpacks for the following:
+
+* libsodium
+* ffmpeg
+* libopus
+
+And obviously, the multipack buildpack. These are the ones that I use:
+
+https://github.com/renanoronfle/heroku-multipack.git
+https://github.com/JustinLove/heroku-buildpack-libsodium.git
+https://github.com/shunjikonishi/heroku-buildpack-ffmpeg.git
+https://github.com/Crazycatz00/heroku-buildpack-libopus.git
+
+Obviously if you're running it on a personal server or in some other instance, you'll have to make sure these dependencies are installed.

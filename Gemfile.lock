@@ -26,6 +26,7 @@ GEM
     mime-types-data (3.2016.0521)
     multi_json (1.12.1)
     netrc (0.11.0)
+    newrelic_rpm (4.2.0.334)
     opus-ruby (1.0.1)
       ffi
     rbnacl (3.4.0)
@@ -51,6 +52,7 @@ PLATFORMS
 
 DEPENDENCIES
   discordrb!
+  newrelic_rpm
   rbnacl-libsodium
   streamio-ffmpeg
 
