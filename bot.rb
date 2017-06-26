@@ -43,6 +43,29 @@ $bot.message(with_text: "who is champ?") do |event|
 	end
 end
 
+$bot.message(with_text: "yeah boy") do |event|
+	channel = event.user.voice_channel
+	if channel
+		playAudioInChannel(channel, "yeahboy.mp3")
+	end
+end
+
+$bot.message(with_text: "peacock") do |event|
+	channel = event.user.voice_channel
+	if channel
+		playAudioInChannel(channel, "peacock.mp3")
+	else
+		event.respond("Nickhil never gets to win anything ever again.")
+	end
+end
+
+$bot.message(with_text: "why don't we just relax") do |event|
+	channel = event.user.voice_channel
+	if channel
+		playAudioInChannel(channel, "why-don't-we-just-relax.mp3")
+	end
+end
+
 $bot.message(with_text: "why do you have to be mad?") do |event|
 	channel = event.user.voice_channel
 	if channel

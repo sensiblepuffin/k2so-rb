@@ -12,14 +12,6 @@ GIT
     discordrb-webhooks (3.2.0.1)
       rest-client
 
-GIT
-  remote: https://github.com/stouset/sodium
-  revision: c5d88dea3dd04f0881f96b0f8f50a2f8e68911ee
-  branch: master
-  specs:
-    sodium (0.7.1)
-      ffi (~> 1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,6 +30,8 @@ GEM
       ffi
     rbnacl (3.4.0)
       ffi
+    rbnacl-libsodium (1.0.11)
+      rbnacl (>= 3.0.1)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -57,7 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   discordrb!
-  sodium!
+  rbnacl-libsodium
   streamio-ffmpeg
 
 RUBY VERSION
