@@ -60,7 +60,7 @@ $bot.message(with_text: "peacock") do |event|
 	end
 end
 
-$bot.message(with_text: "why don't we just relax") do |event|
+$bot.message(with_text: "why don't we just relax?") do |event|
 	channel = event.user.voice_channel
 	if channel
 		playAudioInChannel(channel, "why-dont-we-just-relax.mp3")
