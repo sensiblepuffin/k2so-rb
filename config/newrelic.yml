@@ -31,7 +31,7 @@ common: &default_settings
 development:
   <<: *default_settings
   app_name: k2so-rb (Development)
-  monitor_mode=true
+  monitor_mode: true
 
 test:
   <<: *default_settings
